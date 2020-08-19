@@ -1,0 +1,40 @@
+<mvc:View controllerName="destTest.destTest.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<Table items="{oNorthwindModel>/Products}">
+                            <columns>
+                                <Column>
+                                    <Text text="Name"/>
+                                </Column>
+                            </columns>
+                            <items>
+                                <ColumnListItem>
+                                    <cells>
+                                        <Text text="{oNorthwindModel>ProductName}"/>
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+                        <Table items="{oAjaxModel>/}">
+                            <columns>
+                                <Column>
+                                    <Text text="Name"/>
+                                </Column>
+                            </columns>
+                            <items>
+                                <ColumnListItem>
+                                    <cells>
+                                        <Text text="{oAjaxModel>ProductName}"/>
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
